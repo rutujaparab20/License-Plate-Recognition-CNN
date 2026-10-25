@@ -1,16 +1,22 @@
-# License Plate Recognition System using CNN
+# 🚘 License Plate Recognition System using CNN
 
-A college mini-project that detects vehicle license plates and recognizes their alphanumeric characters using image processing and a Convolutional Neural Network (CNN).
+A computer vision project that detects vehicle license plates and recognizes alphanumeric characters using Python, OpenCV, and a Convolutional Neural Network (CNN).
 
-## Project overview
+## 📌 Project Overview
 
-The project workflow includes:
-1. Detecting the license plate region using OpenCV's Haar Cascade classifier.
-2. Preprocessing the cropped plate using grayscale conversion, thresholding, erosion, and dilation.
-3. Segmenting individual characters using contours.
-4. Classifying characters with a CNN built using TensorFlow/Keras.
+The License Plate Recognition System identifies a vehicle's number plate from an image and recognizes the characters present on it.
 
-## Technologies used
+The project uses image processing techniques to detect the license plate, isolate individual characters, and classify them using a CNN model.
+
+## 🎯 Objectives
+
+- Detect vehicle license plates from images.
+- Preprocess and isolate the license plate region.
+- Segment individual characters from the plate.
+- Recognize letters and digits using a CNN model.
+- Display the detected plate and recognition output.
+
+## 🛠️ Technologies Used
 
 - Python
 - OpenCV
@@ -19,49 +25,102 @@ The project workflow includes:
 - Matplotlib
 - Jupyter Notebook / Google Colab
 
-## Files in this repository
+## ⚙️ Project Workflow
 
-- `LPD_notebook.ipynb` — project notebook and implementation.
-- `Mini_Project_Report.pdf` — college mini-project report.
+1. **Input Image:** Load a vehicle image.
+2. **License Plate Detection:** Detect the plate region using OpenCV Haar Cascade.
+3. **Image Preprocessing:** Convert the image to grayscale and apply thresholding and morphological operations.
+4. **Character Segmentation:** Extract individual characters using contours.
+5. **Character Recognition:** Use a CNN model to classify the extracted letters and digits.
+6. **Output:** Display the detected plate and recognized characters.
 
-## Dataset availability
+## 📸 Project Output
 
-The original dataset used during college development is no longer available with the project owner, so it is **not included** in this repository. The notebook also contains Google Drive paths that refer to the original dataset and classifier file. These paths must be updated before running the complete workflow.
+The following screenshots show the different stages of the project.
 
-To retrain the CNN, provide your own compatible character-image dataset arranged in training and validation folders, and update the paths in the notebook. You may also need to provide a compatible Haar Cascade XML file.
+### 1. Original Vehicle Image
 
-## How to run
+![Original Vehicle Image](car%20image_01.png)
 
-1. Download or clone this repository.
-2. Open `LPD_notebook.ipynb` in Jupyter Notebook or Google Colab.
-3. Install the required libraries.
-4. Update the dataset and Haar Cascade file paths in the notebook.
-5. Run the cells in order. Training requires a compatible dataset; the notebook will not run end-to-end without it.
+### 2. Detected License Plate
 
-Example installation:
+![Detected License Plate](Detected%20number%20plate%20region_03.png)
+
+### 3. Isolated License Plate Region
+
+![Isolated License Plate](Isolated%20license%20plate%20region_04.png)
+
+### 4. Character Segmentation
+
+![Segmented Characters](Segmented%20Characters_05.png)
+
+### 5. Isolated Characters
+
+![Isolated Characters](Isolated%20characters%20from%20plate_06.png)
+
+### 6. Final Character Recognition
+
+![Final Recognition](Final%20recognized%20license%20plate_07.png)
+
+### 7. Input Image for Recognition
+
+![Input Image](Input%20image%20for%20license%20plate%20recognition_02.png)
+
+## 📊 Reported Results
+
+According to our college project report:
+
+- Test images: 15
+- License plates detected: 15 out of 15
+- Plate numbers correctly recognized: 12 out of 15
+- Reported recognition accuracy: 80%
+
+These are the results documented in the college report and have not been independently re-evaluated.
+
+## 📂 Project Files
+
+- `LPD_notebook.ipynb` — Jupyter Notebook containing the project implementation.
+- `Mini_Project_Report.pdf` — College project report.
+- `requirements.txt` — Python library requirements.
+- Output images — Visual examples of detection, segmentation, and recognition.
+
+## 💻 Installation
+
+Install the required Python libraries:
 
 ```bash
-pip install opencv-python tensorflow numpy matplotlib scikit-learn
+pip install opencv-python tensorflow numpy matplotlib scikit-learn jupyter
 ```
 
-## Reported project results
+## ▶️ How to Run
 
-The college report describes testing on 15 vehicle images:
-- License plates detected: 15 out of 15.
-- License plate numbers correctly recognized: 12 out of 15.
-- Reported recognition accuracy: 80%.
+1. Clone or download this repository.
+2. Open `LPD_notebook.ipynb` in Jupyter Notebook or Google Colab.
+3. Install the required libraries.
+4. Update the dataset, model, and Haar Cascade paths in the notebook.
+5. Run the notebook cells in order.
 
-These are the results reported in the project report, not an independently reproduced benchmark.
+**Note:** The original dataset used during development is no longer available with the project owner. You will need a compatible dataset to retrain the model, and the notebook's original file paths must be updated.
 
-## Limitations
+## ⚠️ Limitations
 
-- The original dataset is not included.
-- The notebook uses machine-specific Google Drive paths that need to be changed.
-- Performance may vary with image quality, lighting, plate angle, and character segmentation.
-- The results should be re-evaluated if the model is retrained on a different dataset.
+- The original training dataset is not included.
+- Machine-specific paths may require modification.
+- Recognition performance may vary with lighting, image quality, plate angle, and character segmentation.
 
-## Academic project and credits
+## 👥 Academic Project and Credits
 
-This was a group mini-project completed at Sindhudurg Shikshan Prasarak Mandal's College of Engineering, Kankavli, during 2024–25. The submitted report lists Tejal V. Gawade, Rutuja S. Parab, and Tejasvi R. Parab as project authors, with Prof. D. P. Mhapasekar as guide.
+This group mini-project was completed at Sindhudurg Shikshan Prasarak Mandal's College of Engineering, Kankavli, during 2024–25.
 
-Please retain the group credits and follow any college or dataset licensing requirements when sharing this project publicly.
+**Project Authors:**
+- Tejal V. Gawade
+- Rutuja S. Parab
+- Tejasvi R. Parab
+
+**Project Guide:** Prof. D. P. Mhapasekar
+
+## 👩‍💻 Author
+
+**Rutuja Santosh Parab**
+
+GitHub: [rutujaparab20](https://github.com/rutujaparab20)
